@@ -2,5 +2,83 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: greenyellow;
+}
+
+.bg-level {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #89613D;
+  z-index: -2;
+}
+
+.arena {
+  padding: 0;
+  width: 750px;
+  height: 450px;
+  background: url('../img/background_image.png') no-repeat;
+  background-size: cover;
+  margin: 50px auto;
+  position: relative;
+  border: 8px solid transparent;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+  .log {
+    height: 23.1px;
+    width: 82.6px;
+    /*
+    background: url('../img/log.png') no-repeat;
+    background-size: cover;
+    */
+    background-color: saddlebrown;
+    border-radius: 30px;
+  }
+
+  .tree {
+    width: 62.22px;
+    height: 70px;
+    background: url('../img/tree.png');
+    background-size: cover;
+  }
+  .rock {
+    width: 55px;
+    height: 41px;
+    background: url('../img/rock.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .flower {
+    width: 30px;
+    height: 33px;
+    background: url('../img/plant.png') no-repeat;
+    background-size: cover;
+  }
+
+  .fire {
+    height: 40px;
+    width: 32px;
+    background: url('../img/fire.gif');
+    background-repeat: repeat-y;
+  }
+
+  .koala {
+    height: 54.46px;
+    width: 40px;
+    background: url('../img/character.png') no-repeat;
+    background-size: cover;
+  }
+
+  .arrow {
+    height: 27px;
+    width: 22px;
+    background: url('../img/arrow.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 }

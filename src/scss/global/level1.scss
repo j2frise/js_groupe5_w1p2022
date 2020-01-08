@@ -1,0 +1,163 @@
+
+
+.arena {
+  .enter{
+    width: 60px;
+    height: 8px;
+    background-color: transparent;
+    position: absolute;
+    top:-8px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .exit{
+    width: 60px;
+    height: 8px;
+    background-color: transparent;
+    position: absolute;
+    bottom:-8px;
+    right: 0;
+    z-index: 2;
+  }
+
+  .up_bush {
+    width: 613px;
+    height: 45px;
+    background: url('../img/level1/up_bush.png') no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .down_bush {
+    width: 613px;
+    height: 45px;
+    background: url('../img/level1/down_bush.png') no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .left_bush {
+    width: 56px;
+    height: 450px;
+    background: url('../img/level1/left_bush.png') no-repeat;
+    background-size: cover;
+  }
+
+  .right_bush {
+    width: 69px;
+    height: 458px;
+    background: url('../img/level1/right_bush.png') no-repeat;
+    background-size: cover;
+  }
+
+  .outside_bush_up {
+    width: 56px;
+    height: 83px;
+    background: url('../img/level1/outside_bush_up.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .outside_bush_down_1 {
+    width: 56px;
+    height: 113px;
+    background: url('../img/level1/outside_bush_down_1.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .outside_bush_down_2 {
+    width: 48px;
+    height: 96px;
+    background: url('../img/level1/outside_bush_down_2.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .blob_down_left {
+    width: 161px;
+    height: 149px;
+    background: url('../img/level1/blob_down_left.png') no-repeat;
+    background-size: cover;
+  }
+
+  
+  .blob_up_right {
+    width: 86px;
+    height: 113px;
+    background: url('../img/level1/blob_up_right.png') no-repeat;
+    background-size: cover;
+  }
+
+  
+  .blob_down {
+    width: 116px;
+    height: 122px;
+    background: url('../img/level1/blob_down.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .blob_up {
+    width: 187px;
+    height: 186px;
+    background: url('../img/level1/blob_up.png') no-repeat;
+    background-size: cover;
+  }
+
+  .dead_tree_down_left {
+    width: 45px;
+    height: 113px;
+    background: url('../img/level1/dead_tree_down_left.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .dead_tree_down_middle {
+    width: 30px;
+    height: 66px;
+    background: url('../img/level1/dead_tree_down_middle.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .dead_tree_down_right {
+    width: 30px;
+    height: 66px;
+    background: url('../img/level1/dead_tree_down_right.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .dead_tree_up_right {
+    width: 33px;
+    height: 86px;
+    background: url('../img/level1/dead_tree_up_right.png') no-repeat;
+    background-size: cover;
+  }
+
+  .burning_tree_down {
+    width: 46px;
+    height: 114px;
+    background: url('../img/level1/burning_tree_down.png') no-repeat;
+    background-size: cover;
+  }
+
+  .burning_tree_right {
+    width: 31px;
+    height: 77px;
+    background: url('../img/level1/burning_tree_right.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .burning_tree_up_left {
+    width: 29px;
+    height: 77px;
+    background: url('../img/level1/burning_tree_up_left.png') no-repeat;
+    background-size: cover;
+  }
+  
+  .burning_tree_up_right {
+    width: 39px;
+    height: 97px;
+    background: url('../img/level1/burning_tree_up_right.png') no-repeat;
+    background-size: cover;
+  }
+}
