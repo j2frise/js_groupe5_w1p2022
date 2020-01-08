@@ -30,14 +30,14 @@ body {
   grid-template-rows: repeat(12, 1fr);
 
   .log {
-    height: 23.1px;
-    width: 82.6px;
-    /*
+    width: 23.1px;
+    height: 82.6px;
+  
     background: url('../img/log.png') no-repeat;
     background-size: cover;
-    */
-    background-color: saddlebrown;
-    border-radius: 30px;
+    
+    /*background-color: saddlebrown;
+    border-radius: 30px;*/
   }
 
   .tree {
