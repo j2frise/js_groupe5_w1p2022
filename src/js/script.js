@@ -108,10 +108,10 @@ oxo.screens.loadScreen('home', function() {
     var rock2 = addElement("rock","left",230,"top",225,"#arena");
     var rock3 = addElement("rock","left",460,"top",245,"#arena");
 
-    var log1 = addElement("log","left",95,"top",120,"#arena");
-    log1.style.transform = "rotate(-45deg)";
-    var log2 = addElement("log","left",345,"down",110,"#arena");
-    log2.style.transform = "rotate(90deg)";
+    var log1 = addElement("log","left",110,"top",85,"#arena");
+    log1.style.transform = "rotate(40deg)";
+    var log2 = addElement("log","left",385,"down",110,"#arena");
+    log2.style.transform = "rotate(0deg)";
 
     var tree1 = addElement("tree","right",65,"top",65,"#arena");
     var tree2 = addElement("tree","left",165,"down",125,"#arena");
