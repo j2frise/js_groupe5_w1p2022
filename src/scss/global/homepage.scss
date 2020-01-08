@@ -1,0 +1,88 @@
+.bg-home {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/home_menu/australia-fire_Flou 2.png') no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.bg-blur {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.free-koalas {
+  position: absolute;
+  width: 247px;
+  height: 46px;
+  left: 61px;
+  top: 165.04px;
+  font-family: Silom;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  color: #787878;
+  transform: rotate(-27.7deg);
+}
+
+.logo_koalasRescue {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0 90px 0;
+}
+
+.text-instruction {
+  font-family: Silom;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 66px;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.btn_link-letsplay {
+  text-decoration: none;
+  font-family: Silom;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  border: 1px solid #AA590D;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn_play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin: 30px;
+  }
+}
+
+.burning-koala {
+  position: absolute;
+  width: 209.65px;
+  height: 148px;
+  left: 1252px;
+  top: 632px;
+}
