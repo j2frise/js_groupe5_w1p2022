@@ -1,3 +1,4 @@
+
 .bg__home {
   position: fixed;
   width: 100vw;
@@ -22,66 +23,87 @@
   z-index: -1;
 }
 
-.free__koalas {
-  position: absolute;
-  width: 247px;
-  height: 46px;
-  left: 61px;
-  top: 165.04px;
-  font-family: Silom;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 46px;
-  color: #787878;
-  transform: rotate(-27.7deg);
-}
-
-.logo__koalasRescue {
-  display: flex;
-  justify-content: center;
-  margin: 50px 0 60px 0;
-}
-
-.text__instruction {
-  font-family: Silom;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 66px;
-  width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  letter-spacing: 0.13em;
+.container {
+  position : relative;
   color: #ffffff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.btn__link {
-  text-decoration: none;
-  font-family: Silom;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 50px;
-  color: #ffffff;
-  border: 1px solid #aa590d;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.btn__link--letsplay {
+  width: 850px;
+  height: 450px;
+  margin: 40px auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  img {
-    margin: 30px;
+  .free__koalas {
+    position: absolute;
+    width: 77px;
+    height: 26px;
+    left: 0px;
+    top: 60px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    color: #787878;
+    transform: rotate(-27.7deg);
+  }
+
+  
+  .logo__koalasRescue {
+    width: 300px;
+    height: 170px;
+    margin-bottom: 30px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text__instruction {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 66px;
+    width: 700px;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  
+  .btn__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    animation: pulse 1.8s infinite;
+    position: relative;
+    top: 10px;
+    
+    .btn__link--letsplay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin: 30px;
+        width: 45px;
+      }
+    }
+  }
+
+  
+  .burning__koala {
+    position: absolute;
+    width: 209.65px;
+    height: 148px;
+    right: -8px;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.burning__koala {
-  position: absolute;
-  width: 209.65px;
-  height: 148px;
-  left: 1252px;
-  top: 532px;
-}
