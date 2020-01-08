@@ -1,4 +1,4 @@
-.bg-home {
+.bg__home {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -11,7 +11,7 @@
   z-index: -2;
 }
 
-.bg-blur {
+.bg__blur {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -22,7 +22,7 @@
   z-index: -1;
 }
 
-.free-koalas {
+.free__koalas {
   position: absolute;
   width: 247px;
   height: 46px;
@@ -37,13 +37,13 @@
   transform: rotate(-27.7deg);
 }
 
-.logo_koalasRescue {
+.logo__koalasRescue {
   display: flex;
   justify-content: center;
   margin: 50px 0 60px 0;
 }
 
-.text-instruction {
+.text__instruction {
   font-family: Silom;
   font-style: normal;
   font-weight: bold;
@@ -57,7 +57,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.btn_link-letsplay {
+.btn__link {
   text-decoration: none;
   font-family: Silom;
   font-style: normal;
@@ -68,7 +68,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.btn_play {
+.btn__link--letsplay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@
   }
 }
 
-.burning-koala {
+.burning__koala {
   position: absolute;
   width: 209.65px;
   height: 148px;
