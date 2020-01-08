@@ -1,3 +1,157 @@
-body {
-  background-color: FFF09F;
+.bg-end {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF09F;
+  background-size: cover;
+  z-index: -2;
+}
+
+.decor {
+  display: flex;
+  justify-content: space-between;
+
+  &__forest,
+  &__ocean {
+    height: 100vh;
+  }
+
+  &__ocean {
+    &--flipper {
+      position: absolute;
+      width: 73px;
+      height: 92.32px;
+      left: 1524px;
+      top: 198px;
+    }
+
+    &--eugene {
+      position: absolute;
+      width: 77px;
+      height: 77px;
+      left: 1278px;
+      top: 566px;
+      animation: rotate 30s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+      from {
+        top: 200px;
+      }
+
+      50% {
+        top: 700px;
+      }
+
+      to {
+        top: 200px;
+      }
+    }
+  }
+
+  &__center {
+    &--text {
+      position: absolute;
+      width: 658px;
+      height: 122px;
+      left: 264px;
+      top: 125px;
+    }
+
+    &--savedkoalas {
+      position: absolute;
+      width: 293px;
+      height: 31px;
+      left: 420px;
+      top: 243px;
+      font-family: Silom;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+      color: #FF9D33;
+    }
+
+    &--happykoalas {
+      position: absolute;
+      width: 73px;
+      height: 88.16px;
+      animation: bounce 0.7s ease infinite;
+    }
+
+    .happykoalas--1 {
+      position: absolute;
+      left: 160px;
+      top: -44px;
+    }
+
+    .happykoalas--2 {
+      position: absolute;
+      left: 260px;
+      top: 144px;
+    }
+
+    .happykoalas--3 {
+      position: absolute;
+      left: 60px;
+      top: 74px;
+    }
+
+    .happykoalas--4 {
+      position: absolute;
+      left: -50px;
+      top: 14px;
+    }
+
+    .happykoalas--5 {
+      position: absolute;
+      left: -260px;
+      top: 144px;
+    }
+
+    @keyframes bounce {
+      from {
+        top: 350px;
+      }
+
+      50% {
+        top: 360px;
+      }
+
+      to {
+        top: 340px;
+      }
+    }
+
+    .btn__link--backtomenu {
+      position: absolute;
+      width: 383px;
+      height: 20px;
+      left: 370px;
+      top: 630px;
+      font-family: Silom;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
+      color: #555E63;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+    }
+
+    .btn__menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &--img {
+        margin: 30px;
+      }
+    }
+  }
 }
