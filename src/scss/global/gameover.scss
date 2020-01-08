@@ -1,0 +1,61 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+html {
+  background-color: #232323;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dead_koala {
+  width: 284px;
+  height: 244px;
+  margin-top: 38px;
+}
+
+.warning_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 54px;
+  margin-bottom: 106px;
+  width: 571px;
+  height: 92px;
+}
+
+.text_message {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Silom";
+  font-size: 15px;
+  animation: fadeIn 1s infinite;
+}
