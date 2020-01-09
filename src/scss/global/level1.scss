@@ -1,163 +1,382 @@
+.game__play {
+  width: 1100px;
+  height: 510px;
+  margin: 20px auto;
+  color: white;
 
+  .top_part {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 
-.arena {
-  .enter{
-    width: 60px;
-    height: 8px;
-    background-color: transparent;
-    position: absolute;
-    top:-8px;
-    left: 0;
-    z-index: 2;
-  }
+    .level {
+      width: 120px;
+      height: 100%;
+      text-align: center;
+      padding-left: 50px;
+      font-size: 30px;
+    }
 
-  .exit{
-    width: 100px;
-    height: 8px;
-    background-color: transparent;
-    position: absolute;
-    bottom:-8px;
-    right: 0;
-    z-index: 2;
-  }
+    .score {
+      width: 180px;
+      height: 100%;
+      font-size: 16px;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      position : relative;
+      top: -7px;
 
-  .up_bush {
-    width: 613px;
-    height: 45px;
-    background: url('../img/level1/up_bush.png') no-repeat;
-    background-size: cover;
-    z-index: 2;
-  }
-
-  .down_bush {
-    width: 613px;
-    height: 45px;
-    background: url('../img/level1/down_bush.png') no-repeat;
-    background-size: cover;
-    z-index: 2;
-  }
-
-  .left_bush {
-    width: 56px;
-    height: 450px;
-    background: url('../img/level1/left_bush.png') no-repeat;
-    background-size: cover;
+      img {
+        width: 45px;
+      }
+    }
   }
 
-  .right_bush {
-    width: 69px;
-    height: 458px;
-    background: url('../img/level1/right_bush.png') no-repeat;
-    background-size: cover;
-  }
+  .bottom_part {
+    widows: 100%;
+    height: 455px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  .outside_bush_up {
-    width: 56px;
-    height: 83px;
-    background: url('../img/level1/outside_bush_up.png') no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
 
-  .outside_bush_down_1 {
-    width: 56px;
-    height: 113px;
-    background: url('../img/level1/outside_bush_down_1.png') no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
+    .menu__game {
+      height: 100%;
+      width: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-  .outside_bush_down_2 {
-    width: 48px;
-    height: 96px;
-    background: url('../img/level1/outside_bush_down_2.png') no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
+      .wooden__log__menu{
+        position: absolute;
+        z-index: -1;
+        width: 150px;
+        height: 350px;
+      }
 
-  .blob_down_left {
-    width: 161px;
-    height: 149px;
-    background: url('../img/level1/blob_down_left.png') no-repeat;
-    background-size: cover;
-  }
+      .elements__menu {
+        width: 80px;
+        height: auto;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-  
-  .blob_up_right {
-    width: 86px;
-    height: 113px;
-    background: url('../img/level1/blob_up_right.png') no-repeat;
-    background-size: cover;
-  }
+        a {
+          color: white;
+          text-decoration: none;
+          text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        }
+      }
 
-  
-  .blob_down {
-    width: 116px;
-    height: 122px;
-    background: url('../img/level1/blob_down.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .blob_up {
-    width: 187px;
-    height: 186px;
-    background: url('../img/level1/blob_up.png') no-repeat;
-    background-size: cover;
-  }
+      .back__menu {
+        flex-direction: column;
+        margin-bottom: 30px;
 
-  .dead_tree_down_left {
-    width: 45px;
-    height: 113px;
-    background: url('../img/level1/dead_tree_down_left.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .dead_tree_down_middle {
-    width: 30px;
-    height: 66px;
-    background: url('../img/level1/dead_tree_down_middle.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .dead_tree_down_right {
-    width: 30px;
-    height: 66px;
-    background: url('../img/level1/dead_tree_down_right.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .dead_tree_up_right {
-    width: 33px;
-    height: 86px;
-    background: url('../img/level1/dead_tree_up_right.png') no-repeat;
-    background-size: cover;
-  }
+        a {
+          font-size:28px;
+        }
+      }
 
-  .burning_tree_down {
-    width: 46px;
-    height: 114px;
-    background: url('../img/level1/burning_tree_down.png') no-repeat;
-    background-size: cover;
-  }
+      .help {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 85%;
+        height: 30px; display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-  .burning_tree_right {
-    width: 31px;
-    height: 77px;
-    background: url('../img/level1/burning_tree_right.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .burning_tree_up_left {
-    width: 29px;
-    height: 77px;
-    background: url('../img/level1/burning_tree_up_left.png') no-repeat;
-    background-size: cover;
-  }
-  
-  .burning_tree_up_right {
-    width: 39px;
-    height: 97px;
-    background: url('../img/level1/burning_tree_up_right.png') no-repeat;
-    background-size: cover;
+        a {
+          color: white;
+          text-decoration: none;
+          text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .question_mark {
+          z-index: 100000000;
+        }
+      }
+    }
+
+    
+    .arena {
+      .enter{
+        width: 60px;
+        height: 8px;
+        background-color: transparent;
+        position: absolute;
+        top:-8px;
+        left: 0;
+        z-index: 2;
+      }
+
+      .exit{
+        width: 100px;
+        height: 8px;
+        background-color: transparent;
+        position: absolute;
+        bottom:-8px;
+        right: 0;
+        z-index: 2;
+      }
+
+      .up_bush {
+        width: 613px;
+        height: 45px;
+        background: url('../img/level1/up_bush.png') no-repeat;
+        background-size: cover;
+        z-index: 2;
+      }
+
+      .down_bush {
+        width: 613px;
+        height: 45px;
+        background: url('../img/level1/down_bush.png') no-repeat;
+        background-size: cover;
+        z-index: 2;
+      }
+
+      .left_bush {
+        width: 56px;
+        height: 450px;
+        background: url('../img/level1/left_bush.png') no-repeat;
+        background-size: cover;
+      }
+
+      .right_bush {
+        width: 69px;
+        height: 458px;
+        background: url('../img/level1/right_bush.png') no-repeat;
+        background-size: cover;
+      }
+
+      .outside_bush_up {
+        width: 56px;
+        height: 83px;
+        background: url('../img/level1/outside_bush_up.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+      }
+
+      .outside_bush_down_1 {
+        width: 56px;
+        height: 113px;
+        background: url('../img/level1/outside_bush_down_1.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+      }
+
+      .outside_bush_down_2 {
+        width: 48px;
+        height: 96px;
+        background: url('../img/level1/outside_bush_down_2.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+      }
+
+      .blob_down_left {
+        width: 161px;
+        height: 149px;
+        background: url('../img/level1/blob_down_left.png') no-repeat;
+        background-size: cover;
+      }
+
+      
+      .blob_up_right {
+        width: 86px;
+        height: 113px;
+        background: url('../img/level1/blob_up_right.png') no-repeat;
+        background-size: cover;
+      }
+
+      
+      .blob_down {
+        width: 116px;
+        height: 122px;
+        background: url('../img/level1/blob_down.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .blob_up {
+        width: 187px;
+        height: 186px;
+        background: url('../img/level1/blob_up.png') no-repeat;
+        background-size: cover;
+      }
+
+      .dead_tree_down_left {
+        width: 45px;
+        height: 113px;
+        background: url('../img/level1/dead_tree_down_left.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .dead_tree_down_middle {
+        width: 30px;
+        height: 66px;
+        background: url('../img/level1/dead_tree_down_middle.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .dead_tree_down_right {
+        width: 30px;
+        height: 66px;
+        background: url('../img/level1/dead_tree_down_right.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .dead_tree_up_right {
+        width: 33px;
+        height: 86px;
+        background: url('../img/level1/dead_tree_up_right.png') no-repeat;
+        background-size: cover;
+      }
+
+      .burning_tree_down {
+        width: 46px;
+        height: 114px;
+        background: url('../img/level1/burning_tree_down.png') no-repeat;
+        background-size: cover;
+      }
+
+      .burning_tree_right {
+        width: 31px;
+        height: 77px;
+        background: url('../img/level1/burning_tree_right.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .burning_tree_up_left {
+        width: 29px;
+        height: 77px;
+        background: url('../img/level1/burning_tree_up_left.png') no-repeat;
+        background-size: cover;
+      }
+      
+      .burning_tree_up_right {
+        width: 39px;
+        height: 97px;
+        background: url('../img/level1/burning_tree_up_right.png') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .wap__game {
+      height: 100%;
+      width:  145px;
+      padding-top: 25px;
+
+      .group__elements {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        margin-bottom: 15px;
+
+        .wap {
+          width: 50%;
+          height: 74%;
+          border-radius: 100%;
+          background: #F4F4F4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+          box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+          cursor: pointer;
+
+          .img__weap {
+            width: 30px;
+          }
+
+          .shovel {
+            width: 45px;
+          }
+
+          .axe {
+            width: 45px;
+          }
+
+          .circle__weap {
+            width: 28px;
+            position : absolute;
+            right: -8px;
+            top: -8px;
+          }
+
+          .number_weap {
+            width: 28px;
+            position : absolute;
+            right: -19px;
+            top: -1px;
+          }
+        }
+
+        .press {
+          width: 40px;
+          height: 42px;
+          background: url('../img/side_menu/cadre_press.png') no-repeat;
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h3 {
+            font-size: 30px;
+          }
+
+          p {
+            margin-top: -17px;
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+
+    .content__rules {
+      position: absolute;
+      width: 400px;
+      border-radius: 15px;
+      height: 450px;
+      left:150px;
+      top:53px;
+      border:5px solid white;
+      background-color: rgba(48,48,48,0.9);
+      z-index: 100;
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      .content__center {
+        width: 80%;
+        height: 75%;
+
+        h1 {
+          font-size: 33px;
+          margin-bottom: 30px;
+        }
+
+        p {
+          margin-bottom: 25px;
+        }
+
+        img {
+          width: 25px;
+          position:relative;
+          top: 5px;
+        }
+      }
+    }
+    
   }
 }

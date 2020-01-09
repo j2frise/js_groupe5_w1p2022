@@ -1,10 +1,10 @@
 
-var speedCaracter = 1000;
+var speedCaracter =   1000;
 let koala;
 let gameOverLevel1;
 let exitLevel1;
 let moveKoala;
-let speed = 0;
+let speed = 100;
 
 oxo.screens.loadScreen('home', home);
 
@@ -68,6 +68,9 @@ oxo.screens.loadScreen('home', home);
         clearInterval(gameOverLevel1);
         clearInterval(exitLevel1);
 
+        koala = addElement("koala","left",42,"top",40,"#arena2");
+        envLevel2();
+
         oxo.inputs.listenKey('enter', function() {
             // do something
             oxo.screens.loadScreen('level3', level3);
@@ -100,7 +103,8 @@ oxo.screens.loadScreen('home', home);
     }
 
     function end() {
-        oxo.inputs.listenKey('enter', function() {
+        var menu = document.getElementById("menu");
+        menu.addEventListener('click', function() {
             // do something
             oxo.screens.loadScreen('home', home);
     
@@ -229,6 +233,41 @@ oxo.screens.loadScreen('home', home);
     var burning_tree_right = addElement("burning_tree_right board","right",155,"top",85,"#arena");
     var burning_tree_up_left = addElement("burning_tree_up_left board","left",240,"top",40,"#arena");
     var burning_tree_up_right = addElement("burning_tree_up_right board","left",339,"top",25,"#arena");
+
+  }
+
+
+  function envLevel2(){
+    var up_bush = addElement("up_bush board","right",38,"top",0,"#arena2");
+
+    var down_bush = addElement("down_bush board","left",36,"down",-8,"#arena2");
+    var left_bush = addElement("left_bush board","left",-6,"top",-1,"#arena2");
+    var right_bush = addElement("right_bush board","right",-6,"top",0,"#arena2");
+    var arrow_enter = addElement("arrow","left",50,"top",5,"#arena2");
+    var arrow_exit = addElement("arrow","right",60,"down",20,"#arena2");
+    var outside_bush_left = addElement("outside_bush_left board","left",5,"top",110,"#arena2");
+    var outside_bush_up_right = addElement("outside_bush_up_right board","right",139,"top",0,"#arena2");
+    var outside_bush_down_right_1 = addElement("outside_bush_down_right_1 board","right",385,"down",-1,"#arena2");
+    var outside_bush_down_right2 = addElement("outside_bush_down_right2 board","right",170,"down",5,"#arena2");
+    var rock1 = addElement("rock board","left",170,"down",145,"#arena2");
+    var rock2 = addElement("rock board","right",170,"down",145,"#arena2");
+    var rock3 = addElement("rock board","right",97,"top",119,"#arena2");
+    var log1 = addElement("log stop","right",90,"down",65,"#arena2");
+    log1.style.transform = "rotate(90deg)";
+    var log2 = addElement("log stop","left",270,"top",30,"#arena2");
+    log2.style.transform = "rotate(90deg)";
+    var log3 = addElement("log stop","left",345,"down",150,"#arena2");
+    var blob_down_left = addElement("blob_down_left-2 board","left",52,"down",15,"#arena2");
+    var blob_down_right = addElement("blob_down_righ-2t board","right",250,"down",47,"#arena2");
+    var blob_middle_left = addElement("blob_middle_lef2t board","left",232,"top",152,"#arena2");
+    
+    var burning_tree_left = addElement("burning_tree_left board","left",248,"top",115,"#arena2");
+    var burning_tree_right = addElement("burning_tree_right board","right",300,"down",95,"#arena2");
+
+    
+    var dead_tree_down_left1 = addElement("dead_tree_down_left1 board","left",70,"down",86,"#arena2");
+    var dead_tree_down_right22 = addElement("dead_tree_down_right22 board","right",300,"down",85,"#arena2");
+    var dead_tree_right11 = addElement("dead_tree_right11 board","right",325,"down",80,"#arena2");
 
   }
 
