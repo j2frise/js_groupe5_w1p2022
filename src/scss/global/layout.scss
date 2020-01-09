@@ -17,15 +17,29 @@ body {
   z-index: -2;
 }
 
+.content__rules.is__open {
+  display: flex;
+}
+
+.cursor_axe {
+  cursor: url('../img/side_menu/weapon_icons/axe.png') 4 10, auto;
+}
+
+.cursor_shovel {
+  cursor: url('../img/side_menu/weapon_icons/shovel.png') 4 10, auto;
+}
+
+.cursor_extinguisher {
+  cursor: url('../img/side_menu/weapon_icons/extinguisher.png') 4 10, auto;
+}
+
 .arena {
   padding: 0;
   width: 750px;
   height: 450px;
   background: url('../img/background_image.png') no-repeat;
   background-size: cover;
-  margin: 50px auto;
   position: relative;
-  border: 8px solid transparent;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(12, 1fr);

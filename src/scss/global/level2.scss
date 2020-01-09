@@ -1,0 +1,101 @@
+.arena {
+    
+    .outside_bush_left {
+        width: 99px;
+        height: 56px;
+        background: url('../img/level2/outside_bush_left.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .outside_bush_up_right {
+        width: 56px;
+        height: 83px;
+        background: url('../img/level2/outside_bush_up_right.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .outside_bush_down_right_1 {
+        width: 54px;
+        height: 95px;
+        background: url('../img/level2/outside_bush_down_right_1.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .outside_bush_down_right2 {
+        width: 66px;
+        height: 135px;
+        background: url('../img/level2/outside_bush_down_right2.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    
+    .blob_down_left-2 {
+        width: 116px;
+        height: 122px;
+        background: url('../img/level2/blob_down_left-2.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .blob_down_righ-2t {
+        width: 122px;
+        height: 113px;
+        background: url('../img/level2/blob_down_righ-2t.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .blob_middle_lef2t {
+        width: 67px;
+        height: 88px;
+        background: url('../img/level2/blob_middle_lef2t.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    
+    .burning_tree_left {
+        width: 31px;
+        height: 77px;
+        background: url('../img/level2/burning_tree_left.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .burning_tree_right {
+        width: 35px;
+        height: 87px;
+        background: url('../img/level2/burning_tree_right.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .dead_tree_down_left1 {
+        width: 30px;
+        height: 66px;
+        background: url('../img/level2/dead_tree_down_left1.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    
+    .dead_tree_down_right22 {
+        width: 23px;
+        height: 51px;
+        background: url('../img/level2/dead_tree_down_right22.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .dead_tree_right11 {
+        width: 35px;
+        height: 87px;
+        background: url('../img/level2/dead_tree_right11.png') no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+}
