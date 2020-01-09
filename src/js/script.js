@@ -1,5 +1,5 @@
 
-var speedCaracter = 1000;
+var speedCaracter =   1000;
 let koala;
 let gameOverLevel1;
 let exitLevel1;
