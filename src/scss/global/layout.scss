@@ -5,6 +5,29 @@ body {
   font-family: 'Silom';
 }
 
+.hide{
+  display: none;
+}
+
+div.elements__menu.hide {
+  display: none !important;
+}
+
+.music__game {
+  position: relative;
+  bottom: -12500px;
+}
+
+.dignoise {
+  position: relative;
+  bottom: -1200px;
+}
+
+.treenoie {
+  position: relative;
+  bottom: -10500px;
+}
+
 .bg-level {
   position: fixed;
   width: 100vw;
