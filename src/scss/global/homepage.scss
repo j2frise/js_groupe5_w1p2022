@@ -26,19 +26,20 @@
 .container {
   position : relative;
   color: #ffffff;
-  width: 850px;
-  height: 450px;
+  width: 950px;
+  height: 550px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .free__koalas {
+    font-family: Silom;
     position: absolute;
     width: 77px;
     height: 26px;
-    left: 0px;
-    top: 60px;
+    left: -10px;
+    top: 150px;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -49,9 +50,9 @@
 
   
   .logo__koalasRescue {
-    width: 300px;
-    height: 170px;
-    margin-bottom: 30px;
+    width: 400px;
+    height: 220px;
+    margin: 70px;
     img{
       width: 100%;
       height: 100%;
@@ -59,6 +60,7 @@
   }
 
   .text__instruction {
+    font-family: Silom;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -71,6 +73,7 @@
 
   
   .btn__link {
+    font-family: Silom;
     text-decoration: none;
     font-style: normal;
     font-weight: bold;
@@ -98,8 +101,9 @@
     position: absolute;
     width: 209.65px;
     height: 148px;
-    right: -8px;
+    right: -50px;
     bottom: 0;
+    
     img {
       width: 100%;
       height: 100%;
