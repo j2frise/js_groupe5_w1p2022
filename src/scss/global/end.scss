@@ -31,8 +31,8 @@
 
     &--eugene {
       position: absolute;
-      width: 77px;
-      height: 77px;
+      width: 47px;
+      height: 47px;
       left: 1278px;
       top: 566px;
       animation: rotate 30s ease-in-out infinite;
@@ -40,7 +40,7 @@
 
     @keyframes rotate {
       from {
-        top: 200px;
+        top: 100px;
       }
 
       50% {
@@ -48,7 +48,7 @@
       }
 
       to {
-        top: 200px;
+        top: 100px;
       }
     }
   }
