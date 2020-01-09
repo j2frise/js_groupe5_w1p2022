@@ -5,12 +5,13 @@ let gameOverLevel1;
 let exitLevel1;
 let actionFire1;
 let actionAxe1;
+let actionShovel1;
 let moveKoala;
 let speed = 100;
 
 let nbAxe = 1;
 let nbExt = 2;
-let nbChovel = 0;
+let nbShovel = 0;
 
 oxo.screens.loadScreen('home', home);
 
@@ -39,14 +40,30 @@ oxo.screens.loadScreen('home', home);
   function level1() {
     var arena = document.getElementById('arena');
     var exit = document.getElementById('exit');
+    var back = document.querySelectorAll('.bck');
+    
+    for(let w = 0; w<back.length; w++){
+        back[w].addEventListener("click", function(){
+            oxo.screens.loadScreen('home', home);
+        });
+    }
+
     koala = addElement("koala","left",42,"top",40,"#arena");
+
+    let selectAxe1 = document.querySelector(".click_axe .number_weap");
+    let selectShovel1 = document.querySelector(".click_shovel .number_weap");
+    let selectExt1 = document.querySelector(".click_extinguisher .number_weap");
+    selectAxe1.innerHTML = nbAxe;
+    selectExt1.innerHTML = nbExt;
+    selectShovel1.innerHTML = nbShovel;
     
     envLevel1();
+    openRules("playRules1");
     
     actionAxe1 = setInterval(useAxe,1000);
     eventClickWeap("arena");
-    addFire("right",50,"down",80,3000);
-    addFire("right",250,"top",190,6000);
+    addFire("right",50,"down",80,2000,"#arena");
+    addFire("right",250,"top",190,3500,"#arena");
     var board = document.querySelectorAll('.board');
 
     gameOverLevel1 = setInterval(fire_is_gameover,1000);
@@ -61,45 +78,94 @@ oxo.screens.loadScreen('home', home);
     function level2() {
         clearInterval(gameOverLevel1);
         clearInterval(exitLevel1);
-        clearInterval(actionFire1);
-        clearInterval(actionAxe1);
+        nbShovel = 1;
+        var back = document.querySelectorAll('.bck');
+        for(let w = 0; w<back.length; w++){
+            back[w].addEventListener("click", function(){
+                oxo.screens.loadScreen('home', home);
+            });
+        }
 
         koala = addElement("koala","left",42,"top",40,"#arena2");
         envLevel2();
+        addFire("left",100,"down",200,1000,"#arena2");
+        addFire("left",390,"down",300,2000,"#arena2");
+        addFire("left",250,"down",50,2500,"#arena2");
 
         oxo.inputs.listenKey('enter', function() {
             // do something
             oxo.screens.loadScreen('level3', level3);
     
           });
+          
+        oxo.animation.moveElementWithArrowKeys(koala, speed);
     }
 
     function level3() {
+        nbShovel = 1;
+        var back = document.querySelectorAll('.bck');
+        for(let w = 0; w<back.length; w++){
+            back[w].addEventListener("click", function(){
+                oxo.screens.loadScreen('home', home);
+            });
+        }
         koala = addElement("koala", "left", 42, "top", 40, "#arena3");
         envLevel3();
+        
+        addFire("left",130,"down",130,500,"#arena3");
+        addFire("left",330,"down",170,1000,"#arena3");
+        addFire("right",60,"down",240,2000,"#arena3");
         oxo.inputs.listenKey('enter', function() {
             // do something
             oxo.screens.loadScreen('level4', level4);
     
           });
+          oxo.animation.moveElementWithArrowKeys(koala, speed);
     }
 
     function level4() {
+        nbShovel = 1;
+        var back = document.querySelectorAll('.bck');
+        for(let w = 0; w<back.length; w++){
+            back[w].addEventListener("click", function(){
+                oxo.screens.loadScreen('home', home);
+            });
+        }
         koala = addElement("koala", "left", 42, "top", 40, "#arena4");
+        koala2 = addElement("koala", "left", -35, "down", 350, "#arena4");
         envLevel4();
+
+        addFire("left", 50, "down", 210,1000,"#arena4");
+        addFire("left", 200, "down", 380,3000,"#arena4");
+        addFire("left", 530, "down", 370,1500,"#arena4");
+        addFire("left", 130, "down", 50,1000,"#arena4");
+        addFire("left", 445, "down", 130,2500,"#arena4");
         oxo.inputs.listenKey('enter', function() {
             // do something
             oxo.screens.loadScreen('level5', level5);
     
           });
+          oxo.animation.moveElementWithArrowKeys(koala, speed);
     }
 
     function level5() {
+        nbShovel = 1;
+        var back = document.querySelectorAll('.bck');
+        for(let w = 0; w<back.length; w++){
+            back[w].addEventListener("click", function(){
+                oxo.screens.loadScreen('home', home);
+            });
+        }
         oxo.inputs.listenKey('enter', function() {
             // do something
             oxo.screens.loadScreen('end', end);
     
           });
+          oxo.animation.moveElementWithArrowKeys(koala, speed);
+          oxo.animation.moveElementWithArrowKeys(koala1, speed);
+          oxo.animation.moveElementWithArrowKeys(koala2, speed);
+          oxo.animation.moveElementWithArrowKeys(koala3, speed);
+          oxo.animation.moveElementWithArrowKeys(koala4, speed);
     }
 
     function end() {
@@ -234,6 +300,12 @@ oxo.screens.loadScreen('home', home);
     var burning_tree_up_left = addElement("burning_tree_up_left board","left",240,"top",40,"#arena");
     var burning_tree_up_right = addElement("burning_tree_up_right board","left",339,"top",25,"#arena");
 
+
+
+
+    var plant1 = addElement("plant1 fleur", "right", 310, "top", 50, "#arena");
+    var plant2 = addElement("plant2 fleur", "left", 430, "down", 70, "#arena");
+
   }
 
 
@@ -269,6 +341,8 @@ oxo.screens.loadScreen('home', home);
     var dead_tree_down_right22 = addElement("dead_tree_down_right22 board","right",300,"down",85,"#arena2");
     var dead_tree_right11 = addElement("dead_tree_right11 board","right",325,"down",80,"#arena2");
 
+    var caterpillar = addElement("caterpillar", "right", 300, "down", 35, "#arena2");
+
   }
 
   
@@ -290,8 +364,8 @@ function envLevel3() {
     var rock3 = addElement("rock board", "right", 120, "down", 285, "#arena3");
 
 
-    var plant1 = addElement("plant1 board", "left", 80, "down", 310, "#arena3");
-    var plant2 = addElement("plant2 board", "left", 350, "down", 80, "#arena3");
+    var plant1 = addElement("fleur board", "left", 80, "down", 310, "#arena3");
+    var plant2 = addElement("fleur board", "left", 350, "down", 80, "#arena3");
 
 
     var tree1 = addElement("tree board", "right", 265, "down", 95, "#arena3");
@@ -336,6 +410,8 @@ function envLevel3() {
 
     var arrow_enter = addElement("arrow", "left", 50, "top", 5, "#arena3");
     var arrow_exit = addElement("arrow", "right", 60, "down", 20, "#arena3");
+
+    var caterpillar = addElement("caterpillar", "right", 30, "top", 135, "#arena3");
 
 }
 
@@ -392,11 +468,13 @@ function envLevel4() {
 
     var caterpillar = addElement("caterpillar", "right", 375, "top", 35, "#arena4");
 
-    var plant1 = addElement("plant1 board", "right", 310, "top", 50, "#arena4");
-    var plant2 = addElement("plant2 board", "left", 430, "down", 70, "#arena4");
+    var plant1 = addElement("plant1 fleur", "right", 310, "top", 50, "#arena4");
+    var plant2 = addElement("plant2 fleur", "left", 430, "down", 70, "#arena4");
 
 
     var tree1 = addElement("tree board", "left", 165, "down", 195, "#arena4");
+
+    var caterpillar = addElement("caterpillar", "right", 375, "top", 35, "#arena4");
 }
 
 function envLevel5() {
@@ -433,17 +511,14 @@ function envLevel5() {
 
 }
 
-  function addFire(x, valX, y, valY, time){
-      var fire;
+  function addFire(x, valX, y, valY, time,local){
     setTimeout(function(){
-        fire = createFire(x, y, valX, valY);
+        var fireCreate = createFire(x, y, valX, valY,local);
     },time);
-    return fire;
   }
 
-  function createFire(x, y, valX, valY){
-       var fire = addElement("fire",x,valX,y,valY,"#arena");
-       return fire;
+  function createFire(x, y, valX, valY,local){
+       var fire = addElement("fire",x,valX,y,valY,local);
   }
 
   function collision(first, second) {
@@ -462,27 +537,30 @@ function envLevel5() {
         }
     }
 
-    function eventClickWeap(place) {
+    function eventClickWeap(place,action1,action2,action3,local) {
         var cursor_axe = document.querySelector(".click_axe");
         var cursor_shovel = document.querySelector(".click_shovel");
         var cursor_extinguisher = document.querySelector(".click_extinguisher");
 
         cursor_axe.addEventListener("click",function(){
             changeCursor("cursor_axe", place);
-            clearInterval(actionFire1);
-            actionAxe1 = setInterval(useAxe,1000);
+            clearInterval(action2);
+            action1 = setInterval(useAxe,1000);
+            clearInterval(action3);
         });
 
         cursor_shovel.addEventListener("click",function(){
             changeCursor("cursor_shovel", place);
-            clearInterval(actionFire1);
-            clearInterval(actionAxe1);
+            action2 = setInterval(useShovel,1000);
+            clearInterval(action1);
+            clearInterval(action3);
         });
 
         cursor_extinguisher.addEventListener("click",function(){
             changeCursor("cursor_extinguisher", place);
-            actionFire1 = setInterval(useExtinguisher,100);
-            clearInterval(actionAxe1);
+            action3 = setInterval(useExtinguisher,100);
+            clearInterval(action2);
+            clearInterval(action1);
         });
 
         document.addEventListener('keydown', (event) => {
@@ -490,18 +568,21 @@ function envLevel5() {
             console.log(nameKey);
             if (nameKey === '2' || nameKey === 'numpad 2' || nameKey === 'é') {
                 changeCursor("cursor_axe", place);
-                actionAxe1 = setInterval(useAxe,1000);
-                clearInterval(actionFire1);
+                clearInterval(action2);
+                action1 = setInterval(useAxe,1000);
+                clearInterval(action3);
             }
             else if(nameKey === '3' || nameKey === 'numpad 3' || nameKey === '\"'){
                 changeCursor("cursor_shovel", place);
-                clearInterval(actionFire1);
-                clearInterval(actionAxe1);
+                action2 = setInterval(function(){useShovel(local);},1000);
+                clearInterval(action1);
+                clearInterval(action3);
             }
             else if(nameKey === '1' || nameKey === 'numpad 1' || nameKey === '&'){
                 changeCursor("cursor_extinguisher", place);
-                actionFire1 = setInterval(useExtinguisher,1000);
-                clearInterval(actionAxe1);
+                action3 = setInterval(useExtinguisher,100);
+                clearInterval(action2);
+                clearInterval(action1);
             }
         }, false);
     }
@@ -544,9 +625,20 @@ function envLevel5() {
 
     function useExtinguisher(){
         let fires = document.querySelectorAll('.fire');
-        for(let k = 0; k < fires.length; k++){   
-            fires[k].addEventListener('click',function(){
-                removeElement("fire",k);
+        for(let p = 0; p < fires.length; p++){   
+            fires[p].addEventListener('click',function(){
+                if(nbExt >= 1){
+                    removeElement("fire",p);
+                    nbExt--;
+                    let selectExt1 = document.querySelector(".click_extinguisher .number_weap");
+                    selectExt1.innerHTML = nbExt;
+                    if(nbExt == 0){
+                        let selectExt1Img1 = document.querySelector(".click_extinguisher .circle__weap.red");
+                        let selectExt1Img2 = document.querySelector(".click_extinguisher .circle__weap.none");
+                        selectExt1Img1.classList.add('hide');
+                        selectExt1Img2.classList.remove('hide');
+                    }
+                }
             });
         }
     }
@@ -555,11 +647,56 @@ function envLevel5() {
         let listLogs = document.querySelectorAll('.log');
         for(let z = 0; z < listLogs.length; z++){   
             listLogs[z].addEventListener('click',function(){
-                removeElement("log",z);
+                if(nbAxe >= 1){
+                    let audioTree = document.querySelector(".treenoise");
+                    audioTree.play();
+                    removeElement("log",z);
+                    nbAxe--;
+                    let selectAxe1 = document.querySelector(".click_axe .number_weap");
+                    selectAxe1.innerHTML = nbAxe;
+                    if(nbAxe == 0){
+                        let selectAxe1Img1 = document.querySelector(".click_axe .circle__weap.red");
+                        let selectAxe1Img2 = document.querySelector(".click_axe .circle__weap.none");
+                        selectAxe1Img1.classList.add('hide');
+                        selectAxe1Img2.classList.remove('hide');
+                    }
+                }               
             });
         }
     }
+
     
+    function useShovel(local){
+        let listFlower = document.querySelectorAll('.fleur');
+        for(let y = 0; y < listFlower.length; y++){
+            listFlower[y].addEventListener('click',function(){
+                let posX = listFlower[y].offsetLeft;
+                let posY = listFlower[y].offsetTop;
+                addBonus(posX, posY, local);
+                let audioDig = document.querySelector(".dignoise");
+                audioDig.play();
+                removeElement("fleur",y);
+            });
+        }
+    }
+
+
+    addBonus(px, py, local){
+        let alea = Math.random();
+        let elemnt;
+        if(alea >= 0.5){
+            elemnt = addElement("axe1", "left", px, "top", py, local);
+            
+        }
+        else {
+            elemnt = addElement("extinguisher1", "left", px, "top", py, local);
+        }
+
+        setTimeout(function(){
+            elemnt.remove();
+        },1500);
+    }
+
     function it_is_exit(){  
         oxo.elements.onCollisionWithElement(koala, exit, function() {
             // Character is touched by ennemy
@@ -574,4 +711,21 @@ function envLevel5() {
         for(let i = 0; i < stop.length; i++){  
             
         }
+    }
+
+    function openRules(id) {
+        var playRules = document.getElementById(id);
+        var click = document.querySelector(".help");
+        click.addEventListener("click", function() {
+            if (
+            (playRules.style.display = "none") &&
+            !playRules.classList.contains("is__open")
+            ) {
+            playRules.classList.toggle("is__open");
+            playRules.style.display = "flex";
+            return;
+            }
+            playRules.classList.toggle("is__open");
+            playRules.style.display = "none";
+        });
     }

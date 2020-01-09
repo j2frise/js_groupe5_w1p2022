@@ -10,14 +10,14 @@
         <div class="menu__game">
             <img src="../img/side_menu/wooden_log_menu.png" class="wooden__log__menu" alt="">
             <div class="elements__menu back__menu">
-                <a href="#" class="menu__button">
+                <a href="#" class="menu__button bck" >
                     <img src="../img/side_menu/menu_button.png" alt="">
                 </a>
-                <a href="#">
+                <a href="#" class="bck">
                     MENU
                 </a>
             </div>
-            <div class="elements__menu">
+            <div class="elements__menu play">
                 <a href="#" class="play_button">
                     <img src="../img/side_menu/play_button.png" alt="">
                 </a>
@@ -25,12 +25,28 @@
                     PLAY
                 </a>
             </div>
-            <div class="elements__menu">
+            <div class="elements__menu pause hide">
+                <a href="#" class="play_button">
+                    <img src="../img/side_menu/pause.png" alt="">
+                </a>
+                <a href="#">
+                    PAUSE
+                </a>
+            </div>
+            <div class="elements__menu mute">
                 <a href="#" class="sound_button_on">
                     <img src="../img/side_menu/sound_button_on.png" alt="">
                 </a>
                 <a href="#">
                     MUTE
+                </a>
+            </div>
+            <div class="elements__menu song hide">
+                <a href="#" class="sound_button_on">
+                    <img src="../img/side_menu/sound_button_on.png" alt="">
+                </a>
+                <a href="#">
+                    SONG
                 </a>
             </div>
             <div class="help">
@@ -50,8 +66,9 @@
             <div class="group__elements">
                 <div class="wap click_extinguisher">
                     <img class="extinguisher img__weap" src="../img/side_menu/weapon_icons/extinguisher.png">
-                    <img src="../img/side_menu/circle_weapon_red.png" class="circle__weap" alt="">
-                    <p class="number_weap">1</p>
+                    <img src="../img/side_menu/circle_weapon_red.png" class="circle__weap red" alt="">
+                    <img src="../img/side_menu/circle_weapon_empty.png" class="circle__weap none hide" alt="">
+                    <p class="number_weap"></p>
                 </div>
                 <div class="press" id="press"><p>Press</p><h3>1</h3></div>
             </div>
@@ -59,8 +76,9 @@
             <div class="group__elements">
                 <div class="wap click_axe">
                     <img class="axe img__weap"  src="../img/side_menu/weapon_icons/axe.png">
-                    <img src="../img/side_menu/circle_weapon_red.png" class="circle__weap" alt="">
-                    <p class="number_weap">2</p>
+                    <img src="../img/side_menu/circle_weapon_red.png" class="circle__weap red" alt="">
+                    <img src="../img/side_menu/circle_weapon_empty.png" class="circle__weap none hide" alt="">
+                    <p class="number_weap"></p>
                 </div>
                 <div class="press"><p>Press</p><h3>2</h3></div>
             </div>
@@ -68,15 +86,16 @@
             <div class="group__elements" >
                 <div class="wap click_shovel" >
                     <img class="shovel img__weap" src="../img/side_menu/weapon_icons/shovel.png">
-                    <img src="../img/side_menu/circle_weapon_empty.png" class="circle__weap" alt="">
-                    <p class="number_weap">0</p>
+                    <img src="../img/side_menu/circle_weapon_empty.png" class="circle__weap red" alt="">
+                    <img src="../img/side_menu/circle_weapon_red.png" class="circle__weap none hide" alt="">
+                    <p class="number_weap"></p>
                 </div>
                 <div class="press"><p>Press</p><h3>3</h3></div>
             </div>
         </div>
 
         
-        <div class="content__rules">
+        <div class="content__rules" id="playRules1">
             <div class="content__center">
                 <h1>HOW TO PLAY</h1>
                 <p>- Choose the right tool</p>
@@ -89,3 +108,21 @@
     </div>
 </div>
 <div class="bg-level"></div>
+
+<audio autoplay loop class="music__game">
+    <source src="../audio_files/gamemusic/gamemusic.wav" type="audio/wav"/>
+    <source src="../audio_files/gamemusic/gamemusic.ogg" type="audio/ogg; codecs=vorbis"/>
+    <source src="../audio_files/gamemusic/gamemusic.mp3" type="audio/mpeg"/>
+</audio>
+
+<audio control="" class="dignoise">
+  <source src="../audio_files/dignoise/dignoise.wav" type="audio/wav"/>
+  <source src="../audio_files/dignoise/dignoise.ogg" type="audio/ogg; codecs=vorbis"/>
+  <source src="../audio_files/dignoise/dignoise.mp3" type="audio/mpeg"/>
+</audio>
+
+<audio control="" class="treenoise">
+  <source src="../audio_files/treenoise/treenoise.wav" type="audio/wav"/>
+  <source src="../audio_files/treenoise/treenoise.ogg" type="audio/ogg; codecs=vorbis"/>
+  <source src="../audio_files/treenoise/treenoise.mp3" type="audio/mpeg"/>
+</audio>
