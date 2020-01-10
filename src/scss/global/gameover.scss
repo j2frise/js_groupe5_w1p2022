@@ -1,8 +1,3 @@
-* {
-  font-family: Silom;
-}
-
-
 .bg__gameover {
   position: fixed;
   width: 100vw;
@@ -28,22 +23,32 @@ main {
     width: 185px;
     height: 154px;
     margin-top: 18px;
-    
-    
+    img { 
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .warning__text {
     margin: 44px 10px auto;
     width: 481px;
     height: 88px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .text__message {
     position: relative;
-    top: 82px;
+    font-family: 'Silom Bold';
+    top: -82px;
     font-size: 35px;
     animation: fadeIn 1.5s infinite;
-    color: white;
+    a {
+      color: white;
+    }
   }
 
 }

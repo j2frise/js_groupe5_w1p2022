@@ -6,6 +6,7 @@
     background: url('../img/level3/plant1.png') no-repeat;
     background-size: cover;
     z-index: 1;
+    animation: heartBeat 1.5s infinite;
   }
 
   .plant2 {
@@ -14,6 +15,7 @@
     background: url('../img/level3/plant2.png') no-repeat;
     background-size: cover;
     z-index: 1;
+    animation: heartBeat 1.5s infinite;
   }
 
   .caterpillar {
