@@ -119,6 +119,11 @@ function level2() {
   clearInterval(actionShovel1);
   clearInterval(actionFire1);
   clearInterval(actionAxe1);
+
+  oxo.inputs.listenKey("enter", function() {
+    // do something
+    oxo.screens.loadScreen("level3", level3);
+  });
   nbShovel = 1;
   backup();
   koalaLevel2 = addElement("koala", "left", 42, "top", 40, "#arena2");
@@ -152,6 +157,11 @@ function level3() {
   clearInterval(actionShovel2);
   clearInterval(actionFire2);
   clearInterval(actionAxe2);
+
+  oxo.inputs.listenKey("enter", function() {
+    // do something
+    oxo.screens.loadScreen("level4", level4);
+  });
   nbShovel = 1;
   backup();
   koalaLevel3 = addElement("koala", "left", 42, "top", 40, "#arena3");
@@ -175,6 +185,7 @@ function level3() {
   actionShovel3 = setInterval(function() {
     useShovel("arena3");
   }, 1000);
+
 }
 
 function level4() {
@@ -185,6 +196,12 @@ function level4() {
   clearInterval(actionShovel3);
   clearInterval(actionFire3);
   clearInterval(actionAxe3);
+
+  oxo.inputs.listenKey("enter", function() {
+    // do something
+    oxo.screens.loadScreen("end", end);
+  });
+  
   nbShovel = 1;
   backup();
   koalaLevel4 = addElement("koala", "left", 42, "top", 40, "#arena4");
@@ -209,6 +226,7 @@ function level4() {
   actionShovel4 = setInterval(function() {
     useShovel("arena4");
   }, 1000);
+
 }
 
 function level5() {
