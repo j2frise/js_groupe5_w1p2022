@@ -2,10 +2,10 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Silom';
+  font-family: "Silom Bold";
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -36,7 +36,7 @@ div.elements__menu.hide {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #89613D;
+  background: #89613d;
   z-index: -2;
 }
 
@@ -45,22 +45,22 @@ div.elements__menu.hide {
 }
 
 .cursor_axe {
-  cursor: url('../img/side_menu/weapon_icons/axe.png') 4 10, auto;
+  cursor: url("../img/side_menu/weapon_icons/axe.png") 4 10, auto;
 }
 
 .cursor_shovel {
-  cursor: url('../img/side_menu/weapon_icons/shovel.png') 4 10, auto;
+  cursor: url("../img/side_menu/weapon_icons/shovel.png") 4 10, auto;
 }
 
 .cursor_extinguisher {
-  cursor: url('../img/side_menu/weapon_icons/extinguisher.png') 4 10, auto;
+  cursor: url("../img/side_menu/weapon_icons/extinguisher.png") 4 10, auto;
 }
 
 .arena {
   padding: 0;
   width: 750px;
   height: 450px;
-  background: url('../img/background_image.png') no-repeat;
+  background: url("../img/background_image.png") no-repeat;
   background-size: cover;
   position: relative;
   display: grid;
@@ -70,10 +70,10 @@ div.elements__menu.hide {
   .log {
     width: 23.1px;
     height: 82.6px;
-  
-    background: url('../img/log.png') no-repeat;
+
+    background: url("../img/log.png") no-repeat;
     background-size: cover;
-    
+
     /*background-color: saddlebrown;
     border-radius: 30px;*/
   }
@@ -81,41 +81,41 @@ div.elements__menu.hide {
   .tree {
     width: 62.22px;
     height: 70px;
-    background: url('../img/tree.png');
+    background: url("../img/tree.png");
     background-size: cover;
   }
   .rock {
     width: 55px;
     height: 41px;
-    background: url('../img/rock.png') no-repeat;
+    background: url("../img/rock.png") no-repeat;
     background-size: cover;
   }
-  
+
   .flower {
     width: 30px;
     height: 33px;
-    background: url('../img/plant.png') no-repeat;
+    background: url("../img/plant.png") no-repeat;
     background-size: cover;
   }
 
   .fire {
     height: 40px;
     width: 32px;
-    background: url('../img/fire.gif');
+    background: url("../img/fire.gif");
     background-repeat: repeat-y;
   }
 
   .koala {
     height: 54.46px;
     width: 40px;
-    background: url('../img/character.png') no-repeat;
+    background: url("../img/character.png") no-repeat;
     background-size: cover;
   }
 
   .arrow {
     height: 27px;
     width: 22px;
-    background: url('../img/arrow.png') no-repeat;
+    background: url("../img/arrow.png") no-repeat;
     background-size: cover;
     z-index: -1;
   }
@@ -142,7 +142,6 @@ div.elements__menu.hide {
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
-
 
 @-webkit-keyframes fadeIn {
   from {
