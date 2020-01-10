@@ -681,7 +681,7 @@ function envLevel5() {
     }
 
 
-    addBonus(px, py, local){
+ function   addBonus(px, py, local){
         let alea = Math.random();
         let elemnt;
         if(alea >= 0.5){
